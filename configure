@@ -1,0 +1,30 @@
+#!/bin/bash
+
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+PWD=$(pwd)
+DRY=$PWD/dry
+
+echo $PWD
+
+cd $PWD
+source .venv/bin/activate
+git submodule update --recursive --init
+
+if [[ $machine == "Linux" ]]
+then
+  cd $DRY
+  cd src/open3d_colcon/Open3D/util/
+
+  ./install_deps_ubuntu.sh
+  sudo apt install libgsl-dev
+fi
+
+cd $PWD

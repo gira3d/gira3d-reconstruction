@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd dry/
+rm -rf build install log
+cd ../wet
+rm -rf build install log

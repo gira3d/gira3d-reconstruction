@@ -1,0 +1,20 @@
+site_name: GIRA3D Reconstruction
+
+theme:
+  name: material
+
+markdown_extensions:
+  - toc:
+      permalink: true
+plugins:
+  - mkdocs-jupyter:
+      execute: false
+
+
+repo_name: 'rislab/gira3d-reconstruction'
+repo_url: 'https://github.com/rislab/gira3d-reconstruction'
+
+nav:
+  - Home: 'index.md'
+  - Tutorials:
+    - 'Point Cloud Modeling using SOGMM' : 'tutorials/sogmm-tut.ipynb'

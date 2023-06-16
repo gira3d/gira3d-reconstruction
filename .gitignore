@@ -1,0 +1,6 @@
+.venv
+build/
+install/
+log/
+gira3d-tutorial-data/
+.ipynb_checkpoints/

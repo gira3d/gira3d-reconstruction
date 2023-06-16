@@ -1,0 +1,49 @@
+#!/bin/bash
+
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+if [[ $machine == "Linux" ]]
+then
+  echo "Detected ${machine} environment. Building."
+
+  source .venv/bin/activate
+  cd dry/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ..
+  source workon
+  cd wet/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ..
+  source workon
+
+  cd dry/build/open3d_colcon/
+  make install-pip-package -j${nproc}
+fi
+
+if [[ $machine == "Mac" ]]
+then
+  echo "Detected ${machine} environment. Building with CPU support only."
+
+  touch ./wet/src/sogmm_open3d/COLCON_IGNORE
+
+  source .venv/bin/activate
+  cd dry/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ..
+  source workon
+  cd wet/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ..
+  source workon
+
+  numcores=$(sysctl -n hw.logicalcpu)
+  cd dry/build/open3d_colcon/
+  make install-pip-package -j${numcores}
+fi

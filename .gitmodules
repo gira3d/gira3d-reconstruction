@@ -1,0 +1,21 @@
+[submodule "docs"]
+	path = docs
+	url = git@github.com:gira3d/gira3d-reconstruction-docs.git
+[submodule "dry/src/eigen_colcon"]
+	path = dry/src/eigen_colcon
+	url = git@github.com:gira3d/eigen_colcon.git
+[submodule "dry/src/open3d_colcon"]
+	path = dry/src/open3d_colcon
+	url = git@github.com:gira3d/open3d_colcon.git
+[submodule "dry/src/pybind11_colcon"]
+	path = dry/src/pybind11_colcon
+	url = git@github.com:gira3d/pybind11_colcon.git
+[submodule "wet/src/self_organizing_gmm"]
+	path = wet/src/self_organizing_gmm
+	url = git@github.com:gira3d/self_organizing_gmm.git
+[submodule "wet/src/sogmm_open3d"]
+	path = wet/src/sogmm_open3d
+	url = git@github.com:gira3d/sogmm_open3d.git
+[submodule "wet/src/sogmm_py"]
+	path = wet/src/sogmm_py
+	url = git@github.com:gira3d/sogmm_py.git
