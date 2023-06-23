@@ -78,7 +78,7 @@ virtual environment is created within this repository using the folder name
 `.venv`. First, we set up the `colcon` build environment.
 
 ```bash
-git clone git@github.com:rislab/gira3d-reconstruction.git
+git clone git@github.com:gira3d/gira3d-reconstruction.git
 git checkout master # or your favorite branch
 git submodule update --recursive --init
 cd gira3d-reconstruction

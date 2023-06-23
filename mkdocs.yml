@@ -11,8 +11,8 @@ plugins:
       execute: false
 
 
-repo_name: 'rislab/gira3d-reconstruction'
-repo_url: 'https://github.com/rislab/gira3d-reconstruction'
+repo_name: 'gira3d/gira3d-reconstruction'
+repo_url: 'https://github.com/gira3d/gira3d-reconstruction'
 
 nav:
   - Home: 'index.md'
