@@ -19,3 +19,6 @@
 [submodule "wet/src/sogmm_py"]
 	path = wet/src/sogmm_py
 	url = git@github.com:gira3d/sogmm_py.git
+[submodule "dry/src/nanoflann_colcon"]
+	path = dry/src/nanoflann_colcon
+	url = git@github.com:gira3d/nanoflann_colcon.git
