@@ -138,9 +138,7 @@ git lfs pull
 Kshitij Goel, Wennie Tabib
 
 ## Acknowledgments
-1. [`ndt_map`](https://github.com/OrebroUniversity/perception_oru-release): BSD License, Copyright (c) 2010, AASS Research Center, Orebro University.
-2. [`octomap`](https://github.com/OctoMap/octomap): New BSD License, Copyright (c) 2009-2013, K.M. Wurm and A. Hornung, University of Freiburg.
-3. [`liegroups`](https://github.com/utiasSTARS/liegroups): The MIT License, Copyright (c) 2017 Lee Clement.
-4. [`Open3D`](https://github.com/isl-org/Open3D): The MIT License (MIT), Copyright (c) 2018-2023 www.open3d.org.
-5. [`Eigen`](https://gitlab.com/libeigen/eigen): Mozilla Public License, v. 2.0.
-6. `CUDA`, `cuBLAS`, `cuSOLVER`: Copyright (c) 2022-2023, NVIDIA CORPORATION.
+1. [`liegroups`](https://github.com/utiasSTARS/liegroups): The MIT License, Copyright (c) 2017 Lee Clement.
+2. [`Open3D`](https://github.com/isl-org/Open3D): The MIT License (MIT), Copyright (c) 2018-2023 www.open3d.org.
+3. [`Eigen`](https://gitlab.com/libeigen/eigen): Mozilla Public License, v. 2.0.
+4. `CUDA`, `cuBLAS`, `cuSOLVER`: Copyright (c) 2022-2023, NVIDIA CORPORATION.
